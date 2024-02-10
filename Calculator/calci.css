@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.title {
+    font-size: 2rem;
+    text-decoration: overline ghostwhite 2px  ;
+    letter-spacing: 4px;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-right: 3px solid rgba(255, 255, 255, .3);
+    border-bottom: 3px solid rgba(255, 255, 255, .3);
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 20px 20px;
+    max-width: 350px;
+}
+
+#output {
+    text-align: right;
+    grid-column: 1 / span 4;
+    width: calc(100% - 20px);
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.display {
+    position: relative;
+}
+
+.copy {
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px white;
+    line-height: 1px;
+    /* Adjust the line-height */
+}
+
+.copy:hover {
+    background-color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+}
+
+#output::-webkit-outer-spin-button,
+#output::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#output:focus {
+    outline: none;
+    border-color: white;
+}
+
+#output::placeholder {
+    color: #aaa;
+}
+
+#output:hover {
+    cursor: text;
+}
+
+#output:active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.calculator>#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    justify-items: center;
+    align-items: center;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px white;
+    transition: background-color 0.4s ease-in-out,
+        box-shadow 0.3s ease-in-out,
+        font-size 0.4s ease-in-out;
+}
+
+#clear {
+    background-color: rgba(108, 85, 226, 0.7);
+    font-weight: bold;
+}
+
+#equal {
+    background-color: rgba(226, 85, 85, 0.7);
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+    box-shadow: 0px 0px 8px black;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ccc;
+    box-shadow: 0px -3px 10px white;
+}
+
+@media screen and (max-width: 600px) {
+    .calculator button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+}
